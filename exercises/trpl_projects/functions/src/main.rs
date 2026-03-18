@@ -1,21 +1,10 @@
-use std::io;
-
 fn main() {
-    println!("Hello, world!");
+    let x = plus_one(4);
 
-    let mut input = String::new();
-
-    println!("Please enter a number");
-
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Error reading line");
-
-    let input: i32 = input.trim().parse().expect("Enter a number");
-
-    another_function(input);
+    println!("x = {x}");
 }
 
-fn another_function(x: i32) {
-    println!("The value of x is {x}");
+fn plus_one(x: i32) -> i32 {
+    return x + 1;
 }
+
