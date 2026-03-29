@@ -1,10 +1,13 @@
 fn main() {
-    let n = 5;
-    let y = plus_one(n);
-    println!("The value of y is: {y}");
+    let mut v: Vec<i32> = vec![1, 2, 3];
+    println!("Initial v: {:?}", v);
+
+    let num: &mut i32 = &mut v[2];
+    println!("Third element prior is: {}", *num);
+    *num += 1;
+    println!("Third element after is: {}", *num);
+    println!("v: {:?}", v);
 }
 
-fn plus_one(x: i32) -> i32 {
-    x + 1
-}
+
 
