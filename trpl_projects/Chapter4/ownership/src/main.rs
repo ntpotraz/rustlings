@@ -1,7 +1,7 @@
 fn main() {
-    let s = String::from("Hello world");
-    let s_ref = &s;
-
-    println!("{}", s_ref);
+    let mut v: Vec<String> = vec![String::from("Hello world")];
+    let mut s: String = v.remove(0);
+    s.push('!');
+    println!("{s}");
 }
 
